@@ -17,8 +17,11 @@ var cli = meow({
 
 var name = cli.input[0]
 
-if (name) return init(name)
-stdin(init)
+if (name) {
+  init(name)
+} else {
+  stdin(init)
+}
 
 function init (name) {
   if (!name) fail('Package name or path is required')
