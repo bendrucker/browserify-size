@@ -9,6 +9,12 @@
 $ npm install --save browserify-size
 ```
 
+For the CLI:
+
+```
+$ npm install --global browserify-size
+```
+
 
 ## Usage
 
