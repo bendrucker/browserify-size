@@ -30,7 +30,10 @@ browserifySize('xtend', callback)
 CLI
 
 ```sh
+# arg
 $ browserify-size xtend
+# stdin
+$ echo xtend | browserify-size
 #=> 366 B
 ```
 
