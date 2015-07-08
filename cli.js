@@ -24,6 +24,7 @@ if (name) {
 }
 
 function init (name) {
+  name = name.trim()
   if (!name) fail('Package name or path is required')
   size(name, function (err, bytes) {
     if (err) return fail(err)
