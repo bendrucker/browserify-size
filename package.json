@@ -29,8 +29,11 @@
   ],
   "dependencies": {
     "browserify": "10.2.4",
-    "get-package-dir": "~1.0.0",
+    "cli-fail": "~1.0.0",
+    "get-package-dir": "~1.0.1",
+    "get-stdin": "~4.0.1",
     "gzip-size": "~2.0.3",
+    "meow": "~3.3.0",
     "pretty-bytes": "~2.0.1",
     "uglify-js": "~2.4.23"
   }
