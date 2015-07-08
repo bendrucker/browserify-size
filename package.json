@@ -1,6 +1,9 @@
 {
   "name": "browserify-size",
   "main": "index.js",
+  "bin": {
+    "browserify-size": "cli.js"
+  },
   "version": "1.0.0",
   "description": "Get the browserified size of a module after minification and gzipping",
   "license": "MIT",
@@ -25,7 +28,8 @@
     "xtend": "~4.0.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "dependencies": {
     "browserify": "10.2.4",
