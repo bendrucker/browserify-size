@@ -2,7 +2,7 @@
   "name": "browserify-size",
   "main": "index.js",
   "version": "0.0.0",
-  "description": "Get the browserified size of a module",
+  "description": "Get the browserified size of a module after minification and gzipping",
   "license": "MIT",
   "repository": "bendrucker/browserify-size",
   "author": {
