@@ -15,8 +15,16 @@ module.exports = function browserifySize (name, options, callback) {
     if (err) return callback(err)
     bundle(dir, function (err, code) {
       if (err) return callback(err)
-      code = minify(code)
-      gzipSize(code, callback)
+      
+      minify(code, function(error, minifiedCode){
+        if(error === null){
+          gzipSize(minifiedCode, callback)
+        }
+        else {
+          return callback(error);
+        }
+      })
+      
     })
   })
 }
@@ -25,6 +33,12 @@ function bundle (dir, callback) {
   browserify(dir).bundle(callback)
 }
 
-function minify (code) {
-  return uglify.minify(code.toString(), {fromString: true}).code
+function minify (code, callback) {
+  try {
+    var minifiedCode = uglify.minify(code.toString(), {fromString: true}).code
+    callback(null, minifiedCode)
+  }
+  catch(error) {
+    callback(error)
+  }
 }
