@@ -22,3 +22,10 @@ test('remote', function (t) {
     t.ok(bytes < 500)
   })
 })
+
+test('uglify error should not crash the application', function (t) {
+  t.doesNotThrow(function () {
+    size('qs', {version: '6.0.1'}, function () {})
+  })
+  t.end()
+})
