@@ -22,3 +22,11 @@ test('remote', function (t) {
     t.ok(bytes < 500)
   })
 })
+
+test('uglify try/catch', function (t) {
+  t.plan(1)
+
+  size('qs', {version: '6.0.1'}, function (err) {
+    t.ok(err, 'catches error')
+  })
+})
