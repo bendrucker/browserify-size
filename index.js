@@ -1,5 +1,7 @@
 'use strict'
 
+var waterfall = require('run-waterfall')
+var partial = require('ap').partial
 var packageDir = require('get-package-dir')
 var browserify = require('browserify')
 var uglify = require('uglify-js')
@@ -11,17 +13,12 @@ module.exports = function browserifySize (name, options, callback) {
     options = {}
   }
 
-  packageDir(name, options, function (err, dir) {
-    if (err) return callback(err)
-    bundle(dir, function (err, code) {
-      if (err) return callback(err)
-      minify(code, function (err, code) {
-        if (err) return callback(err)
-        gzipSize(code, callback)
-      })
-
-    })
-  })
+  waterfall([
+    partial(packageDir, name, options),
+    bundle,
+    minify,
+    gzipSize
+  ], callback)
 }
 
 function bundle (dir, callback) {
