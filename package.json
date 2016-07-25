@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "ap": "~0.2.0",
-    "browserify": "~13.0.1",
+    "browserify": "~13.1.0",
     "cli-fail": "~1.0.0",
     "get-package-dir": "~1.0.1",
     "get-stdin": "~5.0.1",
