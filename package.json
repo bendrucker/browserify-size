@@ -23,7 +23,7 @@
     "bundle"
   ],
   "devDependencies": {
-    "standard": "^7.1.2",
+    "standard": "^8.0.0",
     "tape": "^4.0.0",
     "xtend": "~4.0.0"
   },
