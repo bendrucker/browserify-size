@@ -4,7 +4,7 @@ var waterfall = require('run-waterfall')
 var partial = require('ap').partial
 var packageDir = require('get-package-dir')
 var browserify = require('browserify')
-var uglify = require('uglify-js')
+var uglify = require('uglify-es')
 var gzipSize = require('gzip-size')
 
 module.exports = function browserifySize (name, options, callback) {
@@ -26,10 +26,6 @@ function bundle (dir, callback) {
 }
 
 function minify (code, callback) {
-  try {
-    code = uglify.minify(code.toString(), {fromString: true}).code
-    callback(null, code)
-  } catch (err) {
-    callback(err)
-  }
+  var result = uglify.minify(code.toString())
+  callback(result.error, result.code)
 }
