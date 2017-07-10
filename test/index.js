@@ -1,7 +1,8 @@
 'use strict'
 
 var test = require('tape')
-var size = require('./')
+var size = require('../')
+var path = require('path')
 
 test('local', function (t) {
   t.plan(3)
@@ -26,7 +27,7 @@ test('remote', function (t) {
 test('uglify try/catch', function (t) {
   t.plan(1)
 
-  size('qs', {version: '6.0.1'}, function (err) {
+  size(path.join(__dirname, '/fixture/syntax-error.js'), function (err) {
     t.ok(err, 'catches error')
   })
 })
