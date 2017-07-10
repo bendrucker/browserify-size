@@ -4,7 +4,7 @@
   "bin": {
     "browserify-size": "cli.js"
   },
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Get the browserified size of a module after minification and gzipping",
   "license": "MIT",
   "repository": "bendrucker/browserify-size",
