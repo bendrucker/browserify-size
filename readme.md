@@ -1,4 +1,4 @@
-# browserify-size [![Build Status](https://travis-ci.org/bendrucker/browserify-size.svg?branch=master)](https://travis-ci.org/bendrucker/browserify-size)
+# browserify-size [![Build Status](https://travis-ci.org/bendrucker/browserify-size.svg?branch=master)](https://travis-ci.org/bendrucker/browserify-size) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/browserify-size.svg)](https://greenkeeper.io/)
 
 > Get the browserified size of a module after minification and gzipping
 
