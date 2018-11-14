@@ -6,6 +6,7 @@ var packageDir = require('get-package-dir')
 var browserify = require('browserify')
 var uglify = require('uglify-es')
 var gzipSize = require('gzip-size')
+var unthenify = require('unthenify').unthenify
 
 module.exports = function browserifySize (name, options, callback) {
   if (typeof options === 'function') {
@@ -17,7 +18,7 @@ module.exports = function browserifySize (name, options, callback) {
     partial(packageDir, name, options),
     bundle,
     minify,
-    gzipSize
+    unthenify(gzipSize)
   ], callback)
 }
 
