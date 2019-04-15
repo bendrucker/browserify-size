@@ -42,7 +42,7 @@
     "cli-fail": "~1.0.0",
     "get-package-dir": "~1.0.1",
     "get-stdin": "~6.0.0",
-    "gzip-size": "~5.0.0",
+    "gzip-size": "~5.1.0",
     "meow": "~5.0.0",
     "pretty-bytes": "~5.1.0",
     "run-waterfall": "~1.1.3",
